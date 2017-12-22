@@ -25,12 +25,6 @@ comp = count - (1 << 16)
 Temp = 42.5 + (comp/480.0)
 
 print "Temperature: %.2f" % Temp
-#print "Temp MSB ",format(Temp_MSB,'02x')
-#print "Temp LSB ",format(Temp_LSB,'02x')
-#print "Temp 2 comp ",format(count,'04x')
-#print "Temp : ",format(comp,'04x')
-#print "Temp MSB dec : ",Temp_MSB
-#print "Temp_LSB dec : ",Temp_LSB
 
 Pressure_LSB = bus.read_byte_data(SENSOR_ADDRESS, 0x29)
 Pressure_MSB = bus.read_byte_data(SENSOR_ADDRESS, 0x2a)
@@ -46,10 +40,5 @@ Pressure = count/4096.0
 #Pressure = ((count/4096.0)/1000)*750.064
 
 print "Pressure: %.2f" % Pressure
-#print "Pressure MSB ",format(Pressure_MSB,'02x')
-#print "Pressure LSB ",format(Pressure_LSB,'02x')
-#print "Pressure XLB ",format(Pressure_XLB,'02x')
-#print "Pressure 2 comp ",format(count,'06x')
-#print "Pressure : ",format(comp,'04x')
 
 
